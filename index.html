@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html >
+  <head>
+    <meta charset="UTF-8">
+    <title>tinycad mesh doc</title>
+    
+    
+    
+    
+        <link rel="stylesheet" href="css/style.css">
+
+    
+    
+    
+  </head>
+
+  <body>
+
+    <div class='main'>
+  <svg height=90 width='800' id='logo'></svg>
+  <div class='blurp'>
+  mesh_tinyCAD is a small set of CAD style functions for Blender. These are similar to the standard features that I love in industrial 2D/3D drafting software. The functions are implemented in a way that makes sense inside Blender. These functions are generally bug free but if you think you've found something please <a href="https://github.com/zeffii/mesh_tinyCAD/issues"> report the issue here.</a> 
+  
+  </div>
+  <div class='sections'>
+
+    <div id='VTX' class='part'>
+      <h3>VTX</h3>
+      <p>
+      VTX will automatically do the following:
+      <ul>
+        <li>extend edges towards their intersection (V and T)</li>
+        <li>intersect / weld two crossing edges (X)</li>
+      </ul>
+      </p>
+      <svg id='vtx' height="120" width="800">
+      </svg>
+    </div>
+    <div id='V2X' class='part'>
+      <h3>V2X</h3>
+      <p>
+      V2X places a new vertex at the (projected) intersection of two selected edges. Without modifying the existing geometry
+      </p>
+      <svg id='v2x' height="120" width="800">
+      </svg>      
+    </div>
+    <div id='XALL' class='part'>
+      <h3>XALL</h3>
+      <p>
+      XALL intersects / welds all selected edges. This is like the X mode of the VTX operating on many selected edges.
+      </p>
+      <svg id='xall' height="120" width="800">
+      </svg>      
+    </div>
+    <div id='E2F' class='part'>
+      <h3>E2F</h3>
+      <p>
+      E2F extends one side of a selected edge towards a selected face.
+      </p>
+      <svg id='e2f' height="120" width="800">
+      </svg>       
+    </div>
+
+    <div id='BIX' class='part'>
+      <h3>BIX</h3>
+      <p>
+      BIX makes the bisector of two selected edges. The edges may share a vertex, but don't have to. Edges must be coplanar for the bisector to make sense. <b>Notice:</b> For both scenarios this function will make <i>guide geometry</i> which is not attached to the original geometry.
+      </p>
+      <svg id='bix' height="120" width="800">
+      </svg>      
+    </div>
+    <div id='CCEN' class='part'>
+      <h3>CCEN</h3>
+      <p>
+      CCEN reconstructs a circle, the minimal requirement is that you can select 3 vertices of a degenerate circle. Useful for when you've deleted part of the circle geometry and want to find the centroid to place the 3d cursor, or if you want to make a circle with a different vertex count or radius.
+      </p>
+      <svg id='ccen' height="120" width='800'>
+      </svg>      
+    </div>    
+  </div>
+</div>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.17/d3.min.js'></script>
+
+        <script src="js/index.js"></script>
+
+    
+    
+    
+  </body>
+</html>
