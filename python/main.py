@@ -7,7 +7,7 @@ deltas = [i/40 for i in range(40)]
 def get_points(name):
     scale = 150
     func = getattr(sv_easing_functions, name)
-    results = [(int(delta*scale), int(func(delta)*scale)) for delta in deltas]
+    results = [(int(delta*scale), int(func(delta)*-scale)) for delta in deltas]
 
     format_item = lambda r: f"{r[0]},{r[1]}"
     return "M " + " ".join([format_item(r) for r in results])
@@ -25,9 +25,9 @@ for idx, easing_func in sv_easing_functions.easing_dict.items():
     document <= svg_tag
 
     title = svg.text(easing_name, x=70, y=25, font_size=12, text_anchor="middle")
-    path_1 = svg.path(fill="none", stroke="blue", stroke_width="2", d=get_points(easing_name))
+    path = svg.path(fill="none", stroke="blue", stroke_width="2", d=get_points(easing_name))
 
     panel = document[easing_name]
     panel <= title
-    panel <= path_1
+    panel <= path
 
