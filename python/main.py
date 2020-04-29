@@ -4,12 +4,12 @@ import sv_easing_functions
 document <= "The graphs below represent the easing functions implemented in the Easing node"
 
 
-document <= sv_easing_functions.easing_dict[0].__name__
+# document <= sv_easing_functions.easing_dict[0].__name__
 # print(easing_dict[0].__name__)
 
 svg_tag = html.SVG(
     xmlns="http://www.w3.org/2000/svg",
-    width="140", height="200",
+    width="200", height="200",
     style={"border-style": "solid", "border-width":1, "border-color": "#120"})
 svg_tag <= svg.g(id="panel2")
 
