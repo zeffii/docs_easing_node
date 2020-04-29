@@ -18,7 +18,7 @@ for idx, easing_func in sv_easing_functions.easing_dict.items():
 
     svg_tag = html.SVG(
         xmlns="http://www.w3.org/2000/svg",
-        width="200", height="200",
+        width="200", height="280",
         style={"border-style": "solid", "border-width":1, "border-color": "#aaa"})
     svg_tag <= svg.g(id=easing_name)
     document <= svg_tag
