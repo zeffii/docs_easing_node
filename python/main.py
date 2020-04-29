@@ -1,3 +1,3 @@
 from browser import document
 
-document <= "Hello ! from sublime"
+document <= "The graphs below represent the easing functions implemented in the Easing node"
