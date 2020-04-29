@@ -11,7 +11,8 @@ svg_tag = html.SVG(
     xmlns="http://www.w3.org/2000/svg",
     width="140", height="200",
     style={"border-style": "solid", "border-width":1, "border-color": "#120"})
-sv_tag <= svg.g(id="panel2")
+svg_tag <= svg.g(id="panel2")
+
 document <= svg_tag
 
 title = svg.text('Title', x=70, y=25, font_size=22, text_anchor="middle")
