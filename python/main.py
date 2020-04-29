@@ -2,7 +2,8 @@ from browser import document, svg, html
 import sv_easing_functions
 
 document <= "The graphs below represent the easing functions implemented in the Easing node"
-deltas = [i/40 for i in range(40)]
+num_points = 100
+deltas = [i/num_points for i in range(num_points)]
 
 def get_points(name):
     scale = 150
@@ -13,8 +14,6 @@ def get_points(name):
     return "M " + " ".join([format_item(r) for r in results])
 
 for idx, easing_func in sv_easing_functions.easing_dict.items():
-    if idx > 4:
-        break
     easing_name = easing_func.__name__
 
     svg_tag = html.SVG(
