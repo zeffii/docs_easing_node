@@ -13,3 +13,11 @@ circle = svg.circle(cx=70, cy=120, r=40, stroke="black",stroke_width="2",fill="r
 panel = document["panel"]
 panel <= title
 panel <= circle
+
+"""
+from browser import document, svg
+from browser import html
+
+svg_tag = html.SVG(id="panel4")
+document <= svg_tag
+"""
