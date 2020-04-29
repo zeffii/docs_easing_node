@@ -2,7 +2,7 @@ from browser import document, svg, html
 import sv_easing_functions
 
 # document <= "The graphs below represent the easing functions implemented in the Easing node"
-num_points = 100
+num_points = 80
 deltas = [i/num_points for i in range(num_points)]
 
 def get_points(name):
