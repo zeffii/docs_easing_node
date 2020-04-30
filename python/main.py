@@ -16,6 +16,9 @@ def get_points(name):
     return "M " + " ".join([f"{r[0]},{r[1]}" for r in results])
 
 for idx, easing_func in sv_easing_functions.easing_dict.items():
+    if idx == 0:
+        continue
+        
     easing_name = easing_func.__name__
 
     svg_tag = html.SVG(xmlns="http://www.w3.org/2000/svg", width=200, height=280, style={})
