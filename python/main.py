@@ -13,9 +13,7 @@ g_x_offset, g_y_offset = 25, 0
 def get_points(name):
     func = getattr(sv_easing_functions, name)
     results = [(int(delta*scale), int(func(delta)*-scale)) for delta in deltas]
-
-    format_item = lambda r: f"{r[0]},{r[1]}"
-    return "M " + " ".join([format_item(r) for r in results])
+    return "M " + " ".join([f"{r[0]},{r[1]}" for r in results])
 
 for idx, easing_func in sv_easing_functions.easing_dict.items():
     easing_name = easing_func.__name__
