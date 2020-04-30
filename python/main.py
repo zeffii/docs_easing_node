@@ -1,7 +1,13 @@
 from browser import document, svg, html
 import sv_easing_functions
 
-# document <= "The graphs below represent the easing functions implemented in the Easing node"
+doc_box = """
+The graphs below represent the easing functions implemented in the Easing node, they are calculated from
+the same functions used in Sverchok. If you hover your mouse over a graph, the codebox will show the python 
+function for that graph.
+"""
+
+
 num_points_high = 80
 num_points_low = 20
 deltas_high = [i/num_points_high for i in range(num_points_high)]
