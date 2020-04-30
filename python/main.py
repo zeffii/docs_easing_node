@@ -26,7 +26,7 @@ for idx, easing_func in sv_easing_functions.easing_dict.items():
     # transform="translate(xx yy)"
 
     title = svg.text(easing_name, x=70, y=25, font_size=17, text_anchor="middle")
-    bg = svg.rect(x=0, y=rect_y_offset, width=150, height=150, stroke="#666", fill="none")
+    bg = svg.rect(x=0, y=rect_y_offset, width=150, height=150, stroke="#999", fill="#aaa")
     path = svg.path(fill="none", stroke="#333", stroke_width="2", d=get_points(easing_name))
 
     panel = document[easing_name]
