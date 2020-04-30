@@ -10,8 +10,8 @@ function for that graph.
 
 num_points_high = 80
 num_points_low = 20
-deltas_high = [i/num_points_high for i in range(num_points_high)] + [1.0]
-deltas_low = [i/num_points_low for i in range(num_points_low)] + [1.0]
+deltas_high = [i/num_points_high for i in range(num_points_high+1)]
+deltas_low = [i/num_points_low for i in range(num_points_low+1)]
 
 scale = 150
 
