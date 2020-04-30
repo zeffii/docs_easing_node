@@ -17,7 +17,7 @@ def get_points(name, idx):
     """ some functions only need few points so we speed up this function by switching after 21 """
     func = getattr(sv_easing_functions, name)
     points = deltas_high if idx > 21 else deltas_low 
-    results = [(delta, 1-func(delta)) for delta in points]
+    results = [(delta, -func(delta)) for delta in points]
     # results = [(int(delta*scale), int(func(delta)*-scale)) for delta in points]
     # return "M " + " ".join([f"{r[0]},{r[1]}" for r in results])
     return "M " + " ".join([f"{r[0]:.4f},{r[1]:.4f}" for r in results])
