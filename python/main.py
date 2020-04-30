@@ -8,7 +8,7 @@ scale = 150
 
 path_y_offset = 210
 rect_y_offset = path_y_offset - scale 
-g_x_offset, g_y_offset = 20, 20
+g_x_offset, g_y_offset = 25, 0
 
 def get_points(name):
     func = getattr(sv_easing_functions, name)
@@ -25,7 +25,7 @@ for idx, easing_func in sv_easing_functions.easing_dict.items():
     document <= svg_tag
 
     title = svg.text(easing_name, x=70, y=25, font_size=17, text_anchor="middle")
-    bg = svg.rect(x=0, y=rect_y_offset, width=150, height=150, stroke="#999", fill="#eee")
+    bg = svg.rect(x=0, y=rect_y_offset, width=150, height=150, stroke="#999", fill="#ddd")
     path = svg.path(fill="none", stroke="#333", stroke_width="2", d=get_points(easing_name))
 
     panel = document[easing_name]
