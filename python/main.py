@@ -18,8 +18,6 @@ def get_points(name, idx):
     func = getattr(sv_easing_functions, name)
     points = deltas_high if idx > 21 else deltas_low 
     results = [(delta, -func(delta)) for delta in points]
-    # results = [(int(delta*scale), int(func(delta)*-scale)) for delta in points]
-    # return "M " + " ".join([f"{r[0]},{r[1]}" for r in results])
     return "M " + " ".join([f"{r[0]:.4f},{r[1]:.4f}" for r in results])
 
 for idx, easing_func in sv_easing_functions.easing_dict.items():
@@ -36,7 +34,6 @@ for idx, easing_func in sv_easing_functions.easing_dict.items():
     bg = svg.rect(x=0, y=rect_y_offset, width=150, height=150, stroke="#999", fill="#cdcdcd")
     path = svg.path(
         transform=f"translate(0, {path_y_offset})\nscale(150, 150)", fill="none", stroke="#333", vector_effect="non-scaling-stroke",
-        # transform=f"translate(0, {path_y_offset})", fill="none", stroke="#333", 
         stroke_width="2", d=get_points(easing_name, idx))
     panel = document[easing_name]
     panel <= title
