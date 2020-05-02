@@ -27,7 +27,7 @@ h3 {
   border-left: 1px solid #eee;
 }
 
-.path:hover {
+path:hover {
     stroke: #ec008c;
     opacity: 1;
 }
