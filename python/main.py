@@ -45,4 +45,3 @@ for idx, easing_func in sv_easing_functions.easing_dict.items():
     panel <= title
     panel <= bg
     panel <= path
-

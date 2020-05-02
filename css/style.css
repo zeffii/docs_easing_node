@@ -26,3 +26,8 @@ h3 {
   margin: 10px 20px 10px 20px;
   border-left: 1px solid #eee;
 }
+
+.path:hover {
+    stroke: #ec008c;
+    opacity: 1;
+}
